@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Track Order | Bloom & Petal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    function trackOrder() {
+      const orderId = document.getElementById("orderId").value.trim();
+      const statusBox = document.getElementById("statusBox");
+
+      if (orderId === "") {
+        statusBox.innerHTML = "❌ Please enter a valid Order ID.";
+        statusBox.style.color = "#f44336";
+        return;
+      }
+
+      const sampleOrders = {
+        "BLOOM123": "✅ Your order has been dispatched and will arrive today!",
+        "BLOOM456": "⏳ Your flowers are being prepared. Estimated delivery: Tomorrow.",
+        "BLOOM789": "✅ Order delivered successfully!"
+      };
+
+      if (sampleOrders[orderId.toUpperCase()]) {
+        statusBox.innerHTML = sampleOrders[orderId.toUpperCase()];
+        statusBox.style.color = "#80d8ff";
+      } else {
+        statusBox.innerHTML = "❓ Order ID not found. Please contact support.";
+        statusBox.style.color = "#ff8a80";
+      }
+    }
+  </script>
+</head>
+<body style="
+  margin: 0;
+  background: radial-gradient(circle at top left, #0f0f1c, #1a1a2e, #000000);
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  overflow-x: hidden;
+">
+
+  <div style="
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    animation: floatUpDown 4s ease-in-out infinite alternate;
+  ">
+    <section style="
+      background: rgba(30, 30, 50, 0.95);
+      padding: 35px 45px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3),
+                  0 0 40px rgba(0, 255, 255, 0.1) inset;
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+    ">
+      <h2 style="color: #00e5ff; margin-bottom: 25px; font-size: 28px;">📦 Track Your Order</h2>
+
+      <label for="orderId" style="display:block; margin-bottom: 10px; font-size: 16px;">Enter Order ID:</label>
+      <input type="text" id="orderId" placeholder="e.g. BLOOM123" style="
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        background: #111122;
+        color: #ffffff;
+        margin-bottom: 20px;
+        font-size: 16px;
+        box-shadow: 0 0 10px #00bcd4;
+      ">
+
+      <button onclick="trackOrder()" style="
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(145deg, #00bcd4, #0097a7);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        🔍 Track Now
+      </button>
+
+      <div id="statusBox" style="
+        margin-top: 25px;
+        font-size: 18px;
+        min-height: 40px;
+        color: #ccc;
+      "></div>
+    </section>
+  </div>
+
+  <style>
+    @keyframes floatUpDown {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+
+</body>
+</html>

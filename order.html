@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Flowers | Bloom & Petal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    function updatePrice() {
+      const flower = document.getElementById("flower").value;
+      const priceMap = {
+        "roses": "₹499",
+        "sunflowers": "₹349",
+        "peonies": "₹699",
+        "lilies": "₹399"
+      };
+      document.getElementById("price").value = priceMap[flower] || "";
+    }
+  </script>
+</head>
+<body style="margin: 0; font-family: 'Quicksand', sans-serif; background: linear-gradient(to right, #0f0517, #1a1a2e); color: #fff;">
+
+  <div style="min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 40px;">
+    <section style="width: 100%; max-width: 500px; background: rgba(30, 30, 60, 0.85); padding: 30px; border-radius: 12px; box-shadow: 0 0 20px #ff4081;">
+
+      <h2 style="text-align: center; color: #ff80ab; margin-bottom: 20px;">🌸 Place Your Flower Order</h2>
+
+      <form>
+        <label style="display:block; margin-bottom: 8px;">Full Name</label>
+        <input type="text" placeholder="Your Name" required style="width:100%; padding:10px; border:none; border-radius:8px; background:#222; color:#fff; margin-bottom:16px;">
+
+        <label style="display:block; margin-bottom: 8px;">Email Address</label>
+        <input type="email" placeholder="example@mail.com" required style="width:100%; padding:10px; border:none; border-radius:8px; background:#222; color:#fff; margin-bottom:16px;">
+
+        <label style="display:block; margin-bottom: 8px;">Phone Number</label>
+        <input type="tel" placeholder="+91 XXXXXXXXXX" required style="width:100%; padding:10px; border:none; border-radius:8px; background:#222; color:#fff; margin-bottom:16px;">
+
+        <label style="display:block; margin-bottom: 8px;">Select Flower</label>
+        <select id="flower" onchange="updatePrice()" required style="width:100%; padding:10px; border:none; border-radius:8px; background:#222; color:#fff; margin-bottom:16px;">
+          <option value="">--Choose--</option>
+          <option value="roses">Roses</option>
+          <option value="sunflowers">Sunflowers</option>
+          <option value="peonies">Peonies</option>
+          <option value="lilies">Lilies</option>
+        </select>
+
+        <label style="display:block; margin-bottom: 8px;">Price</label>
+        <input type="text" id="price" readonly style="width:100%; padding:10px; border:none; border-radius:8px; background:#444; color:#ff80ab; margin-bottom:16px; font-weight:bold;">
+
+        <label style="display:block; margin-bottom: 8px;">Special Note</label>
+        <textarea placeholder="Your message..." style="width:100%; height:80px; padding:10px; border:none; border-radius:8px; background:#222; color:#fff;"></textarea>
+
+        <button type="submit" style="margin-top:20px; width:100%; padding:12px; background:#ff4081; color:white; border:none; border-radius:8px; font-size:16px; cursor:pointer;">
+          Submit Order
+        </button>
+      </form>
+
+    </section>
+  </div>
+
+</body>
+</html>
+

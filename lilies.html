@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lily Varieties | Blossom & Petal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(145deg, #000000, #1a1a1a);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e1bee7;
+      text-shadow: 0 0 10px #9c27b0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      width: 280px;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    h3 {
+      color: #e1bee7;
+      margin-top: 10px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      background: #7b1fa2;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .back-link a:hover {
+      background: #9c27b0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌸 Lily Varieties</h1>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="https://image.floranext.com/instances/flordel_nyc/catalog/product/s/t/stargazer_lilies_and_roses_674a5817c9d38.jpg.webp?h=265&w=265&r=255&g=255&b=255">
+      <h3>Stargazer Lily</h3>
+      <p><strong>Price:</strong> ₹599</p>
+      <p>Vibrant pink petals with white edges — a bold choice symbolizing prosperity and ambition.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn.atwilltech.com/flowerdatabase/g/grand-elegance-lily-bouquet-from-roma-florist-5a2724628d125.425.jpg">
+      <h3>Casablanca Lily</h3>
+      <p><strong>Price:</strong> ₹649</p>
+      <p>Elegant white lilies known for their rich fragrance — ideal for weddings and celebrations.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://www.fnp.com/images/pr/l/v20221104175545/colours-of-love_1.jpg">
+      <h3>Asiatic Lily</h3>
+      <p><strong>Price:</strong> ₹499</p>
+      <p>Bright, cheerful colors with no fragrance — perfect for vibrant indoor arrangements.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://www.lilysbespokebouquets.co.uk/wp-content/uploads/2023/03/322C9EF8-4A22-4D4A-98AB-376CE4147581.jpeg">
+      <h3>Tiger Lily</h3>
+      <p><strong>Price:</strong> ₹579</p>
+      <p>Bright orange petals with dark spots — symbolizes courage and confidence.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://flowersonfirst.com/cdn/shop/products/F-V11_0_300x300.jpg?v=1547518552">
+      <h3>Calla Lily</h3>
+      <p><strong>Price:</strong> ₹699</p>
+      <p>Smooth, elegant trumpet-shaped flowers — represent purity, faith, and elegance.</p>
+    </div>
+
+  </div>
+
+  <div class="back-link">
+    <a href="index.html">⬅ Back to Home</a>
+  </div>
+
+</body>
+</html>
+
